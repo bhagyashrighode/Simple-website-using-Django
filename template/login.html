@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn</title>
+    <style>
+    /*set border to the form*/
+
+	form {
+		border: 3px solid #f1f1f1;
+		background-color: orange;
+		height:50%;
+		width:40%;
+		margin-left: auto;
+        margin-right: auto;
+
+	}
+	/*assign full width inputs*/
+
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+	}
+	/*set a style for the buttons*/
+
+	button {
+		background-color: #151B54;
+		color: white;
+		padding: 20px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+
+        margin-left: auto;
+        margin-right: auto;
+	}
+	/* set a hover effect for the button*/
+
+	button:hover {
+		opacity: 0.8;
+	}
+	/*set extra style for the cancel button*/
+
+	/*centre the display image inside the container*/
+
+
+	.container {
+		padding: 20px;
+	}
+	/*set the forgot password text*/
+
+	span.psw {
+		float: right;
+		padding-top: 20px;
+	}
+
+
+		}
+	}
+</style>
+
+</head>
+<body>
+
+    <form action="login" method="post">
+        {%csrf_token%}
+        <h3>LogIn</h3>
+        <label>Username:<input type="text" name="username" placeholder="User_ Name"></label><br>
+        <label>Password:<input type="text" name="Password1" placeholder="Password"></label><br>
+        <input type="Submit" class="login" style=justify-content:center; value="Log In">
+    </form>>
+    <div>
+        {% for message in messages %}
+            <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+</body>
+</html>
